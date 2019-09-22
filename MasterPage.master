@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheetMain.css" rel="stylesheet" />
+    <link href="StyleSheet_Form.css" rel="stylesheet" />
+    <style type="text/css">
+        .logo_img {
+            height: 136px;
+            width: 160px;
+        }
+        .middle {
+            height: 889px;
+        }
+        
+        .auto-style1 {
+            width: 1000px;
+            text-align:right;
+        }
+        .auto-style2 {
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <asp:Image ID="Image1" ImageUrl="~/Data/logo3.png" CssClass="logo_img" runat="server" />
+            <h1>HELPING HANDS</h1>
+            <h3>Connect to Help and Get Helped!</h3>
+        </div>
+        <div class="menu">
+            <a href ="aboutUs.aspx">About Us</a>  
+            <a href ="bloodAid.aspx">Blood Aid</a>
+            <a href ="calamity.aspx">Disaster Aid</a>
+            <a href ="login.aspx" style="text-align:right">Login</a> 
+        </div>
+    <div class="middle">
+        <div class="left">
+            <div class="card_content">
+                <asp:ContentPlaceHolder id="aboutUs" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="right">
+            <div class="card_up">
+                <h3 style="text-align:center; font-family:'Times New Roman', Times, serif; font-size:22px; background-color:black; color:white;">What's new on the website?</h3>
+        <div>
+                <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" style="height:150px; background-color:aquamarine;">
+          <ul style="list-style-image: url('/images/bullet.png')" class="new">
+              <li><a href="calamity.aspx"><asp:Label ID="Label1" runat="server">Check out the Trend Analysis Report in Disaster Aid</asp:Label></a></li>
+              <li><a href="calamity.aspx"><asp:Label ID="Label2" runat="server">Check out the overall Disaster distribution in India</asp:Label></a></li>
+          </ul>
+          </marquee>
+            </div>
+                <div>
+          <center><asp:Image ID="Image2" ImageAlign="Middle" ImageUrl="~/Data/Picture1.png" runat="server"></asp:Image>
+     </center>
+               </div>
+            </div>
+            <div class="card">
+      <h3 style="text-align:center; font-family:'Times New Roman', Times, serif; font-size:22px; background-color:black; color:white;">India Meteorological Department (Important Links)</h3>
+      <div>
+                <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" style="height:150px; background-color:aquamarine;">
+          <ul style="list-style-image: url('/images/bullet.png')" class="new">
+              <li><a href="http://www.imd.gov.in/pages/tourism_forecast.php" target="_blank"><asp:Label ID="Labeln1" runat="server">Tourism forecast</asp:Label></a></li>
+              <li><a href="http://www.imd.gov.in/pages/allindiawxwarningbulletin.php" target="_blank"><asp:Label ID="Labeln2" runat="server">All India Weather Warnings</asp:Label></a></li>
+              <li><a href="http://www.imd.gov.in/pages/allindiawxfcbulletin.php" target="_blank"><asp:Label ID="Labeln3" runat="server">All India Weather Forecast</asp:Label></a></li>
+          <!--<li><a href="News.aspx#Label7" target="_blank"><asp:Label ID="Labeln4" runat="server"></asp:Label></a></li>
+              <li><a href="News.aspx#Label9" target="_blank"><asp:Label ID="Labeln5" runat="server"></asp:Label></a></li>
+              <li><a href="News.aspx#Label11" target="_blank"><asp:Label ID="Labeln6" runat="server"></asp:Label></a></li>-->
+          </ul></marquee>
+          </div>
+                <div>
+                    <center><asp:Image ID="Image3" Height="150px" ImageUrl="~/Data/Picture2.png" runat="server" /></center>
+                </div>
+    </div>
+        </div>
+    </div>
+   
+    </form>
+</body>
+</html>
