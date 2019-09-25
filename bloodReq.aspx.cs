@@ -56,7 +56,7 @@ public partial class bloodReq : System.Web.UI.Page
             int index = Convert.ToInt32(e.CommandArgument);
             String em = GridView1.Rows[index].Cells[3].Text;
            MailMessage msg=new MailMessage();
-           MailAddress frm = new MailAddress("anchal.uday090217@gmail.com", "Admin");
+           MailAddress frm = new MailAddress("#email", "Admin");
            msg.From = frm;
            MailAddress to = new MailAddress(em);
            msg.To.Add(to);
@@ -65,7 +65,7 @@ public partial class bloodReq : System.Web.UI.Page
            SmtpClient smtp = new SmtpClient();
            smtp.Host = "smtp.gmail.com";
            smtp.Port = 587;
-           NetworkCredential nkc = new NetworkCredential("anchal.uday090217@gmail.com", "Dehradun@1234");
+           NetworkCredential nkc = new NetworkCredential("#email ", "#pwd");
            smtp.Credentials = nkc;
            smtp.EnableSsl = true;
            try
@@ -88,7 +88,7 @@ public partial class bloodReq : System.Web.UI.Page
             String em = GridView2.Rows[index].Cells[2].Text;
             
             MailMessage msg=new MailMessage();
-           MailAddress frm = new MailAddress("anchal.uday090217@gmail.com", "Admin");
+           MailAddress frm = new MailAddress("#email", "Admin");
            msg.From = frm;
            MailAddress to = new MailAddress(em);
            msg.To.Add(to);
@@ -97,7 +97,7 @@ public partial class bloodReq : System.Web.UI.Page
            SmtpClient smtp = new SmtpClient();
            smtp.Host = "smtp.gmail.com";
            smtp.Port = 587;
-           NetworkCredential nkc = new NetworkCredential("anchal.uday090217@gmail.com", "Dehradun@1234");
+           NetworkCredential nkc = new NetworkCredential("#email", "#pwd");
            smtp.Credentials = nkc;
            smtp.EnableSsl = true;
            try
